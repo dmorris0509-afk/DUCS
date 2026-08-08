@@ -40,6 +40,7 @@ check_admitted() {
     fi
 
     local admission
+
     admission="$(
         python3 - "$path" <<'PY'
 import json
@@ -57,6 +58,7 @@ try:
         print(value)
     else:
         print("MISSING")
+
 except Exception:
     print("INVALID")
 PY
