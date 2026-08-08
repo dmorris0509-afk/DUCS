@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # DUCS — Deterministic Underlying Claim System
 
 > **Evidence before automation.**
