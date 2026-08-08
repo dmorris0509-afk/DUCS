@@ -1,0 +1,223 @@
+preflight	Set up job	﻿2026-08-08T19:01:46.4503559Z Current runner version: '2.336.0'
+preflight	Set up job	2026-08-08T19:01:46.4531368Z ##[group]Runner Image Provisioner
+preflight	Set up job	2026-08-08T19:01:46.4532330Z Hosted Compute Agent
+preflight	Set up job	2026-08-08T19:01:46.4532938Z Version: 20260707.563
+preflight	Set up job	2026-08-08T19:01:46.4533560Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+preflight	Set up job	2026-08-08T19:01:46.4534328Z Build Date: 2026-07-07T19:33:50Z
+preflight	Set up job	2026-08-08T19:01:46.4535048Z Worker ID: {e51806bd-c304-4cdd-8826-6806791bbd7c}
+preflight	Set up job	2026-08-08T19:01:46.4535739Z Azure Region: westus3
+preflight	Set up job	2026-08-08T19:01:46.4536375Z ##[endgroup]
+preflight	Set up job	2026-08-08T19:01:46.4538151Z ##[group]Operating System
+preflight	Set up job	2026-08-08T19:01:46.4538872Z Ubuntu
+preflight	Set up job	2026-08-08T19:01:46.4539493Z 24.04.4
+preflight	Set up job	2026-08-08T19:01:46.4540001Z LTS
+preflight	Set up job	2026-08-08T19:01:46.4540567Z ##[endgroup]
+preflight	Set up job	2026-08-08T19:01:46.4541115Z ##[group]Runner Image
+preflight	Set up job	2026-08-08T19:01:46.4541691Z Image: ubuntu-24.04
+preflight	Set up job	2026-08-08T19:01:46.4542335Z Version: 20260720.247.2
+preflight	Set up job	2026-08-08T19:01:46.4543393Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+preflight	Set up job	2026-08-08T19:01:46.4545155Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+preflight	Set up job	2026-08-08T19:01:46.4546092Z ##[endgroup]
+preflight	Set up job	2026-08-08T19:01:46.4547329Z ##[group]GITHUB_TOKEN Permissions
+preflight	Set up job	2026-08-08T19:01:46.4549457Z Contents: read
+preflight	Set up job	2026-08-08T19:01:46.4550185Z Metadata: read
+preflight	Set up job	2026-08-08T19:01:46.4550750Z Packages: read
+preflight	Set up job	2026-08-08T19:01:46.4551335Z ##[endgroup]
+preflight	Set up job	2026-08-08T19:01:46.4553562Z Secret source: Actions
+preflight	Set up job	2026-08-08T19:01:46.4554690Z Prepare workflow directory
+preflight	Set up job	2026-08-08T19:01:46.4969582Z Prepare all required actions
+preflight	Set up job	2026-08-08T19:01:46.5019775Z Getting action download info
+preflight	Set up job	2026-08-08T19:01:46.8057085Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+preflight	Set up job	2026-08-08T19:01:47.5190764Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+preflight	Set up job	2026-08-08T19:01:47.7440135Z Complete job name: preflight
+preflight	Checkout DUCS	﻿2026-08-08T19:01:47.8257472Z ##[group]Run actions/checkout@v6
+preflight	Checkout DUCS	2026-08-08T19:01:47.8258713Z with:
+preflight	Checkout DUCS	2026-08-08T19:01:47.8259254Z   repository: dmorris0509-afk/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:47.8263501Z   token: ***
+preflight	Checkout DUCS	2026-08-08T19:01:47.8263967Z   ssh-strict: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8264434Z   ssh-user: git
+preflight	Checkout DUCS	2026-08-08T19:01:47.8264905Z   persist-credentials: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8265433Z   clean: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8265910Z   sparse-checkout-cone-mode: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8266474Z   fetch-depth: 1
+preflight	Checkout DUCS	2026-08-08T19:01:47.8266950Z   fetch-tags: false
+preflight	Checkout DUCS	2026-08-08T19:01:47.8267429Z   show-progress: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8268170Z   lfs: false
+preflight	Checkout DUCS	2026-08-08T19:01:47.8268643Z   submodules: false
+preflight	Checkout DUCS	2026-08-08T19:01:47.8269136Z   set-safe-directory: true
+preflight	Checkout DUCS	2026-08-08T19:01:47.8269703Z   allow-unsafe-pr-checkout: false
+preflight	Checkout DUCS	2026-08-08T19:01:47.8270561Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:47.9298664Z Syncing repository: dmorris0509-afk/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:47.9302016Z ##[group]Getting Git version info
+preflight	Checkout DUCS	2026-08-08T19:01:47.9303286Z Working directory is '/home/runner/work/DUCS/DUCS'
+preflight	Checkout DUCS	2026-08-08T19:01:47.9305361Z [command]/usr/bin/git version
+preflight	Checkout DUCS	2026-08-08T19:01:47.9399179Z git version 2.54.0
+preflight	Checkout DUCS	2026-08-08T19:01:47.9470445Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:47.9479929Z Temporarily overriding HOME='/home/runner/work/_temp/f484987b-d5e6-416f-b290-6167f018ec91' before making global git config changes
+preflight	Checkout DUCS	2026-08-08T19:01:47.9482804Z Adding repository directory to the temporary git global config as a safe directory
+preflight	Checkout DUCS	2026-08-08T19:01:47.9485410Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DUCS/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:47.9541458Z Deleting the contents of '/home/runner/work/DUCS/DUCS'
+preflight	Checkout DUCS	2026-08-08T19:01:47.9548637Z ##[group]Determining repository object format
+preflight	Checkout DUCS	2026-08-08T19:01:47.9551675Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:47.9553445Z ##[group]Initializing the repository
+preflight	Checkout DUCS	2026-08-08T19:01:47.9558332Z [command]/usr/bin/git init /home/runner/work/DUCS/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:47.9700858Z hint: Using 'master' as the name for the initial branch. This default branch name
+preflight	Checkout DUCS	2026-08-08T19:01:47.9702312Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+preflight	Checkout DUCS	2026-08-08T19:01:47.9704028Z hint: to use in all of your new repositories, which will suppress this warning,
+preflight	Checkout DUCS	2026-08-08T19:01:47.9704866Z hint: call:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9705597Z hint:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9706677Z hint: 	git config --global init.defaultBranch <name>
+preflight	Checkout DUCS	2026-08-08T19:01:47.9707942Z hint:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9709168Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+preflight	Checkout DUCS	2026-08-08T19:01:47.9711164Z hint: 'development'. The just-created branch can be renamed via this command:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9712759Z hint:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9713626Z hint: 	git branch -m <name>
+preflight	Checkout DUCS	2026-08-08T19:01:47.9714595Z hint:
+preflight	Checkout DUCS	2026-08-08T19:01:47.9715976Z hint: Disable this message with "git config set advice.defaultBranchName false"
+preflight	Checkout DUCS	2026-08-08T19:01:47.9718326Z Initialized empty Git repository in /home/runner/work/DUCS/DUCS/.git/
+preflight	Checkout DUCS	2026-08-08T19:01:47.9731463Z [command]/usr/bin/git remote add origin https://github.com/dmorris0509-afk/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:47.9779713Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:47.9781637Z ##[group]Disabling automatic garbage collection
+preflight	Checkout DUCS	2026-08-08T19:01:47.9784035Z [command]/usr/bin/git config --local gc.auto 0
+preflight	Checkout DUCS	2026-08-08T19:01:47.9826661Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:47.9828546Z ##[group]Setting up auth
+preflight	Checkout DUCS	2026-08-08T19:01:47.9829691Z Removing SSH command configuration
+preflight	Checkout DUCS	2026-08-08T19:01:47.9836655Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+preflight	Checkout DUCS	2026-08-08T19:01:47.9887278Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+preflight	Checkout DUCS	2026-08-08T19:01:48.0335109Z Removing HTTP extra header
+preflight	Checkout DUCS	2026-08-08T19:01:48.0341879Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+preflight	Checkout DUCS	2026-08-08T19:01:48.0379411Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+preflight	Checkout DUCS	2026-08-08T19:01:48.0608968Z Removing includeIf entries pointing to credentials config files
+preflight	Checkout DUCS	2026-08-08T19:01:48.0615414Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+preflight	Checkout DUCS	2026-08-08T19:01:48.0654799Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+preflight	Checkout DUCS	2026-08-08T19:01:48.0885632Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+preflight	Checkout DUCS	2026-08-08T19:01:48.0927295Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/DUCS/DUCS/.git.path /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Checkout DUCS	2026-08-08T19:01:48.0963749Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/DUCS/DUCS/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Checkout DUCS	2026-08-08T19:01:48.1002620Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Checkout DUCS	2026-08-08T19:01:48.1038721Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Checkout DUCS	2026-08-08T19:01:48.1069809Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:48.1070653Z ##[group]Fetching the repository
+preflight	Checkout DUCS	2026-08-08T19:01:48.1079702Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3549e8f292ef8aa2074132fee6f7fea9d7cd6995:refs/remotes/origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5549269Z From https://github.com/dmorris0509-afk/DUCS
+preflight	Checkout DUCS	2026-08-08T19:01:48.5551595Z  * [new ref]         3549e8f292ef8aa2074132fee6f7fea9d7cd6995 -> origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5598097Z [command]/usr/bin/git branch --list --remote origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5630296Z   origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5639341Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5667937Z 3549e8f292ef8aa2074132fee6f7fea9d7cd6995
+preflight	Checkout DUCS	2026-08-08T19:01:48.5675264Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:48.5678059Z ##[group]Determining the checkout info
+preflight	Checkout DUCS	2026-08-08T19:01:48.5680990Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:48.5682611Z [command]/usr/bin/git sparse-checkout disable
+preflight	Checkout DUCS	2026-08-08T19:01:48.5733427Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+preflight	Checkout DUCS	2026-08-08T19:01:48.5764686Z ##[group]Checking out the ref
+preflight	Checkout DUCS	2026-08-08T19:01:48.5768952Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+preflight	Checkout DUCS	2026-08-08T19:01:48.5838175Z Switched to a new branch 'main'
+preflight	Checkout DUCS	2026-08-08T19:01:48.5842199Z branch 'main' set up to track 'origin/main'.
+preflight	Checkout DUCS	2026-08-08T19:01:48.5849712Z ##[endgroup]
+preflight	Checkout DUCS	2026-08-08T19:01:48.5895220Z [command]/usr/bin/git log -1 --format=%H
+preflight	Checkout DUCS	2026-08-08T19:01:48.5923677Z 3549e8f292ef8aa2074132fee6f7fea9d7cd6995
+preflight	Make runner executable	﻿2026-08-08T19:01:48.6195286Z ##[group]Run chmod +x run.sh deployment/bin/ducs-preflight
+preflight	Make runner executable	2026-08-08T19:01:48.6197241Z ^[[36;1mchmod +x run.sh deployment/bin/ducs-preflight^[[0m
+preflight	Make runner executable	2026-08-08T19:01:48.6249576Z shell: /usr/bin/bash -e {0}
+preflight	Make runner executable	2026-08-08T19:01:48.6250779Z ##[endgroup]
+preflight	Run controlled preflight	﻿2026-08-08T19:01:48.6440956Z ##[group]Run ./run.sh | tee preflight-output.txt
+preflight	Run controlled preflight	2026-08-08T19:01:48.6442542Z ^[[36;1m./run.sh | tee preflight-output.txt^[[0m
+preflight	Run controlled preflight	2026-08-08T19:01:48.6490641Z shell: /usr/bin/bash -e {0}
+preflight	Run controlled preflight	2026-08-08T19:01:48.6491725Z ##[endgroup]
+preflight	Run controlled preflight	2026-08-08T19:01:48.6615562Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6616268Z DUCS PREFLIGHT v0.2
+preflight	Run controlled preflight	2026-08-08T19:01:48.6617280Z ==================
+preflight	Run controlled preflight	2026-08-08T19:01:48.6618231Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6618980Z PASS     RECON-001                      PRESENT
+preflight	Run controlled preflight	2026-08-08T19:01:48.6625007Z PASS     DUCS-REF-001                   PRESENT
+preflight	Run controlled preflight	2026-08-08T19:01:48.6626613Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6627304Z RUNTIME INPUT ADMISSION
+preflight	Run controlled preflight	2026-08-08T19:01:48.6629145Z -----------------------
+preflight	Run controlled preflight	2026-08-08T19:01:48.6630741Z BLOCKED  DCP-001                        NOT ADMITTED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6632318Z BLOCKED  EVD-001                        NOT ADMITTED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6633824Z BLOCKED  EVD-002                        NOT ADMITTED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6635295Z BLOCKED  EVD-003                        NOT ADMITTED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6636849Z BLOCKED  ONR-FGRAI-SPATIAL-001          NOT ADMITTED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6638261Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6639000Z EXECUTION GATE
+preflight	Run controlled preflight	2026-08-08T19:01:48.6640578Z --------------
+preflight	Run controlled preflight	2026-08-08T19:01:48.6642479Z GOLD-001: BLOCKED
+preflight	Run controlled preflight	2026-08-08T19:01:48.6643385Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6643763Z Reason:
+preflight	Run controlled preflight	2026-08-08T19:01:48.6644966Z One or more required runtime inputs are not explicitly ADMITTED.
+preflight	Run controlled preflight	2026-08-08T19:01:48.6646141Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6646580Z No execution artifacts generated.
+preflight	Run controlled preflight	2026-08-08T19:01:48.6648039Z No evidence manufactured.
+preflight	Run controlled preflight	2026-08-08T19:01:48.6648718Z 
+preflight	Run controlled preflight	2026-08-08T19:01:48.6649087Z RESULT
+preflight	Run controlled preflight	2026-08-08T19:01:48.6649895Z ------
+preflight	Run controlled preflight	2026-08-08T19:01:48.6650724Z PASS checks:    2
+preflight	Run controlled preflight	2026-08-08T19:01:48.6651640Z Blocked checks: 5
+preflight	Run controlled preflight	2026-08-08T19:01:48.6652591Z STATUS: HOLD
+preflight	Verify controlled HOLD	﻿2026-08-08T19:01:48.6728616Z ##[group]Run grep -q "GOLD-001: BLOCKED" preflight-output.txt
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6730499Z ^[[36;1mgrep -q "GOLD-001: BLOCKED" preflight-output.txt^[[0m
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6732138Z ^[[36;1mgrep -q "STATUS: HOLD" preflight-output.txt^[[0m
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6733645Z ^[[36;1mecho "DUCS policy enforcement: PASS"^[[0m
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6735109Z ^[[36;1mecho "GOLD-001 remains correctly blocked."^[[0m
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6783362Z shell: /usr/bin/bash -e {0}
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6784437Z ##[endgroup]
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6964241Z DUCS policy enforcement: PASS
+preflight	Verify controlled HOLD	2026-08-08T19:01:48.6966853Z GOLD-001 remains correctly blocked.
+preflight	Upload preflight evidence	﻿2026-08-08T19:01:48.7130935Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7136647Z ##[group]Run actions/upload-artifact@v4
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7138105Z with:
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7138979Z   name: ducs-preflight-output
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7140084Z   path: preflight-output.txt
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7141150Z   if-no-files-found: warn
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7142160Z   compression-level: 6
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7143185Z   overwrite: false
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7144118Z   include-hidden-files: false
+preflight	Upload preflight evidence	2026-08-08T19:01:48.7145154Z ##[endgroup]
+preflight	Upload preflight evidence	2026-08-08T19:01:48.8807200Z (node:2272) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+preflight	Upload preflight evidence	2026-08-08T19:01:48.8810468Z (Use `node --trace-deprecation ...` to show where the warning was created)
+preflight	Upload preflight evidence	2026-08-08T19:01:48.8861358Z With the provided path, there will be 1 file uploaded
+preflight	Upload preflight evidence	2026-08-08T19:01:48.8867724Z Artifact name is valid!
+preflight	Upload preflight evidence	2026-08-08T19:01:48.8870694Z Root directory input is valid!
+preflight	Upload preflight evidence	2026-08-08T19:01:49.1882711Z Beginning upload of artifact content to blob storage
+preflight	Upload preflight evidence	2026-08-08T19:01:49.2077118Z (node:2272) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+preflight	Upload preflight evidence	2026-08-08T19:01:49.4682525Z Uploaded bytes 457
+preflight	Upload preflight evidence	2026-08-08T19:01:49.5367485Z Finished uploading artifact content to blob storage!
+preflight	Upload preflight evidence	2026-08-08T19:01:49.5369220Z SHA256 digest of uploaded artifact zip is a676f35410d55c46faef3377f913b01d194e67057fa65817cbbe26e594204aea
+preflight	Upload preflight evidence	2026-08-08T19:01:49.5372006Z Finalizing artifact upload
+preflight	Upload preflight evidence	2026-08-08T19:01:49.7375294Z Artifact ducs-preflight-output.zip successfully finalized. Artifact ID 9026288992
+preflight	Upload preflight evidence	2026-08-08T19:01:49.7376732Z Artifact ducs-preflight-output has been successfully uploaded! Final size is 457 bytes. Artifact ID is 9026288992
+preflight	Upload preflight evidence	2026-08-08T19:01:49.7383216Z Artifact download URL: https://github.com/dmorris0509-afk/DUCS/actions/runs/31273398416/artifacts/9026288992
+preflight	Post Checkout DUCS	﻿2026-08-08T19:01:49.7595079Z Post job cleanup.
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8482986Z [command]/usr/bin/git version
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8527237Z git version 2.54.0
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8571359Z Temporarily overriding HOME='/home/runner/work/_temp/004eb56b-7568-4f94-b477-b972c6564f45' before making global git config changes
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8572833Z Adding repository directory to the temporary git global config as a safe directory
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8577153Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DUCS/DUCS
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8613491Z Removing SSH command configuration
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8621221Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8661060Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8912683Z Removing HTTP extra header
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8919420Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.8957874Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9220051Z Removing includeIf entries pointing to credentials config files
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9228710Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9259334Z includeif.gitdir:/home/runner/work/DUCS/DUCS/.git.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9260365Z includeif.gitdir:/home/runner/work/DUCS/DUCS/.git/worktrees/*.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9261477Z includeif.gitdir:/github/workspace/.git.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9263033Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9270682Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/DUCS/DUCS/.git.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9297495Z /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9323320Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/DUCS/DUCS/.git.path /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9376723Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/DUCS/DUCS/.git/worktrees/*.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9406125Z /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9418109Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/DUCS/DUCS/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9463614Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9493653Z /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9504873Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9544215Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9572849Z /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9582526Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9623170Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+preflight	Post Checkout DUCS	2026-08-08T19:01:49.9850641Z Removing credentials config '/home/runner/work/_temp/git-credentials-ec8d6e17-84e5-4952-aae4-14fa3f72442f.config'
+preflight	Complete job	﻿2026-08-08T19:01:49.9999624Z Cleaning up orphan processes
+preflight	Complete job	2026-08-08T19:01:50.0284969Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
