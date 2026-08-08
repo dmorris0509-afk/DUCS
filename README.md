@@ -18,6 +18,23 @@ DUCS is an evidence-governed reference architecture and deterministic execution 
 | Certification | NOT CLAIMED |
 | Ratification | NOT CLAIMED |
 
+## Try the Gate
+
+Run the controlled preflight locally:
+
+```bash
+./run.sh
+```
+
+Expected controlled result:
+
+```text
+GOLD-001: BLOCKED
+STATUS: HOLD
+```
+
+[Public proof surface](docs/LAUNCH.md)
+
 ## Why DUCS?
 
 Automated systems can fail in more ways than producing an incorrect fact.
