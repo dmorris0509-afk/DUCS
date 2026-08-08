@@ -1,0 +1,15 @@
+name: DUCS Preflight
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Make preflight executable
+        run: chmod +x deployment/bin/ducs-preflight
+      - name: Run preflight
+        run: ./deployment/bin/ducs-preflight
