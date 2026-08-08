@@ -1,0 +1,30 @@
+
+DUCS PRELIGHT v0.1
+==================
+
+PASS     RECON-001                      PRESENT
+PASS     DUCS-REF-001                   PRESENT
+
+RUNTIME INPUT ADMISSION
+-----------------------
+BLOCKED  DCP-001                        NOT ADMITTED
+BLOCKED  EVD-001                        NOT ADMITTED
+BLOCKED  EVD-002                        NOT ADMITTED
+BLOCKED  EVD-003                        NOT ADMITTED
+BLOCKED  ONR-FGRAI-SPATIAL-001          NOT ADMITTED
+
+EXECUTION GATE
+--------------
+GOLD-001: BLOCKED
+
+Reason:
+Required attributable runtime inputs are not admitted.
+
+No execution artifacts generated.
+No evidence manufactured.
+
+RESULT
+------
+PASS checks:    2
+Blocked checks: 5
+STATUS: HOLD

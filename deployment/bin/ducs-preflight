@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+set -u
+
+echo
+echo "DUCS PRELIGHT v0.1"
+echo "=================="
+echo
+
+PASS=0
+BLOCKED=0
+
+check_present() {
+    local name="$1"
+    local path="$2"
+
+    if [ -e "$path" ]; then
+        printf "PASS     %-30s PRESENT\n" "$name"
+        PASS=$((PASS + 1))
+    else
+        printf "BLOCKED  %-30s MISSING\n" "$name"
+        BLOCKED=$((BLOCKED + 1))
+    fi
+}
+
+check_admitted() {
+    local name="$1"
+    local path="$2"
+
+    if [ -f "$path" ]; then
+        printf "CHECK    %-30s ADMISSION RECORD PRESENT\n" "$name"
+    else
+        printf "BLOCKED  %-30s NOT ADMITTED\n" "$name"
+        BLOCKED=$((BLOCKED + 1))
+    fi
+}
+
+check_present "RECON-001" "RECON-001"
+check_present "DUCS-REF-001" "DUCS-REF-001"
+
+echo
+echo "RUNTIME INPUT ADMISSION"
+echo "-----------------------"
+
+check_admitted "DCP-001" "runtime_input/DCP-001.json"
+check_admitted "EVD-001" "runtime_input/EVD-001.json"
+check_admitted "EVD-002" "runtime_input/EVD-002.json"
+check_admitted "EVD-003" "runtime_input/EVD-003.json"
+check_admitted "ONR-FGRAI-SPATIAL-001" "runtime_input/ONR-FGRAI-SPATIAL-001.json"
+
+echo
+echo "EXECUTION GATE"
+echo "--------------"
+
+if [ "$BLOCKED" -eq 0 ]; then
+    echo "GOLD-001: AUTHORIZED"
+    echo
+    echo "All required runtime inputs are admitted."
+else
+    echo "GOLD-001: BLOCKED"
+    echo
+    echo "Reason:"
+    echo "Required attributable runtime inputs are not admitted."
+    echo
+    echo "No execution artifacts generated."
+    echo "No evidence manufactured."
+fi
+
+echo
+echo "RESULT"
+echo "------"
+echo "PASS checks:    $PASS"
+echo "Blocked checks: $BLOCKED"
+
+if [ "$BLOCKED" -gt 0 ]; then
+    echo "STATUS: HOLD"
+    exit 2
+fi
+
+echo "STATUS: READY"
+exit 0
