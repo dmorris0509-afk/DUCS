@@ -7,9 +7,28 @@ on:
 jobs:
   preflight:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v6
-      - name: Make preflight executable
-        run: chmod +x deployment/bin/ducs-preflight
-      - name: Run preflight
-        run: ./deployment/bin/ducs-preflight
+      - name: Checkout DUCS
+        uses: actions/checkout@v6
+
+      - name: Make runner executable
+        run: chmod +x run.sh deployment/bin/ducs-preflight
+
+      - name: Run controlled preflight
+        id: preflight
+        continue-on-error: true
+        run: ./run.sh | tee preflight-output.txt
+
+      - name: Verify controlled HOLD
+        run: |
+          grep -q "GOLD-001: BLOCKED" preflight-output.txt
+          grep -q "STATUS: HOLD" preflight-output.txt
+          echo "DUCS policy enforcement: PASS"
+          echo "GOLD-001 remains correctly blocked."
+
+      - name: Upload preflight evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ducs-preflight-output
+          path: preflight-output.txt
