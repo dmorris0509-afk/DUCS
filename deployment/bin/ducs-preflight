@@ -3,7 +3,7 @@
 set -u
 
 echo
-echo "DUCS PRELIGHT v0.1"
+echo "DUCS PREFLIGHT v0.2"
 echo "=================="
 echo
 
@@ -27,12 +27,67 @@ check_admitted() {
     local name="$1"
     local path="$2"
 
-    if [ -f "$path" ]; then
-        printf "CHECK    %-30s ADMISSION RECORD PRESENT\n" "$name"
-    else
+    if [ ! -f "$path" ]; then
         printf "BLOCKED  %-30s NOT ADMITTED\n" "$name"
         BLOCKED=$((BLOCKED + 1))
+        return
     fi
+
+    if ! command -v python3 >/dev/null 2>&1; then
+        printf "BLOCKED  %-30s PYTHON3 REQUIRED\n" "$name"
+        BLOCKED=$((BLOCKED + 1))
+        return
+    fi
+
+    local admission
+    admission="$(
+        python3 - "$path" <<'PY'
+import json
+import sys
+
+path = sys.argv[1]
+
+try:
+    with open(path, "r", encoding="utf-8") as f:
+        obj = json.load(f)
+
+    value = obj.get("admission")
+
+    if isinstance(value, str):
+        print(value)
+    else:
+        print("MISSING")
+except Exception:
+    print("INVALID")
+PY
+    )"
+
+    case "$admission" in
+        ADMITTED)
+            printf "PASS     %-30s ADMITTED\n" "$name"
+            PASS=$((PASS + 1))
+            ;;
+        INCOMPLETE)
+            printf "BLOCKED  %-30s INCOMPLETE\n" "$name"
+            BLOCKED=$((BLOCKED + 1))
+            ;;
+        BLOCKED)
+            printf "BLOCKED  %-30s BLOCKED\n" "$name"
+            BLOCKED=$((BLOCKED + 1))
+            ;;
+        MISSING)
+            printf "BLOCKED  %-30s ADMISSION UNDECLARED\n" "$name"
+            BLOCKED=$((BLOCKED + 1))
+            ;;
+        INVALID)
+            printf "BLOCKED  %-30s INVALID JSON\n" "$name"
+            BLOCKED=$((BLOCKED + 1))
+            ;;
+        *)
+            printf "BLOCKED  %-30s ADMISSION=%s\n" "$name" "$admission"
+            BLOCKED=$((BLOCKED + 1))
+            ;;
+    esac
 }
 
 check_present "RECON-001" "RECON-001"
@@ -55,12 +110,12 @@ echo "--------------"
 if [ "$BLOCKED" -eq 0 ]; then
     echo "GOLD-001: AUTHORIZED"
     echo
-    echo "All required runtime inputs are admitted."
+    echo "All required runtime inputs are explicitly ADMITTED."
 else
     echo "GOLD-001: BLOCKED"
     echo
     echo "Reason:"
-    echo "Required attributable runtime inputs are not admitted."
+    echo "One or more required runtime inputs are not explicitly ADMITTED."
     echo
     echo "No execution artifacts generated."
     echo "No evidence manufactured."
